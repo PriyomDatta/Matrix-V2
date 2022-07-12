@@ -1,4 +1,5 @@
 #include"Rot.hpp"
+#include"Lin.hpp"
 
 int main()
 {
@@ -14,13 +15,15 @@ int main()
         cout<<"\nFor rotation press r and for linear press l:";
         cin>>Typ_op;
         if(Typ_op=='r'||Typ_op=='R')
-        {rotation(Vec);}
+            rotation(Vec);
+        else if(Typ_op=='l'||Typ_op=='L')
+            line(Vec);
+        else
+            cout<<"Next time enter properly";
         cout<<"\nThe vector with respect to current frame is:";
         for(int i=0;i<3;i++)
-        {
             cout<<Vec[i]<<"\t";
-        }
-        cout<<"\nIf you have any other operation press y else press any other key";
+        cout<<"\nIf you have any other operation press y else press any other key: ";
         cin>>c;
     } while (c=='y'||c=='Y');
     
